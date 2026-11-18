@@ -1,0 +1,121 @@
+{% comment %}
+  Native Shopify section. Select the real skincare collection in the theme editor.
+  Product names, images, prices, availability, and variant IDs come from Shopify.
+{% endcomment %}
+{{ 'flower-ink-featured-collection.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'flower-ink-collection-navigation.js' | asset_url }}" defer="defer"></script>
+
+{%- liquid
+  assign selected_collection = section.settings.collection
+  assign product_limit = section.settings.products_to_show
+-%}
+
+{% if selected_collection != blank or request.design_mode %}
+  <div
+    id="FlowerInkCollection-{{ section.id }}"
+    class="shop-collection"
+    data-collection-carousel
+    style="--collection-ink:{{ section.settings.text_color }};--collection-accent:{{ section.settings.accent_color }};background:{{ section.settings.background_color }};padding-top:{{ section.settings.padding_top }}px;padding-bottom:{{ section.settings.padding_bottom }}px"
+  >
+    <div class="shop-collection-container">
+      <div class="shop-collection-heading">
+        <div>
+          {% if section.settings.eyebrow != blank %}<p class="atelier-label">{{ section.settings.eyebrow | escape }}</p>{% endif %}
+          <h2>{{ section.settings.heading | escape }}</h2>
+          {% if section.settings.description != blank %}<p class="shop-collection-subtitle">{{ section.settings.description | escape }}</p>{% endif %}
+        </div>
+        <div class="shop-collection-actions">
+          {% if section.settings.show_view_all and selected_collection != blank %}<a class="shop-view-all" href="{{ selected_collection.url }}">View all <span aria-hidden="true">&rarr;</span></a>{% endif %}
+          <button type="button" class="shop-collection-arrow" data-collection-direction="-1" aria-label="Previous products" aria-controls="FlowerInkGrid-{{ section.id }}">&larr;</button>
+          <button type="button" class="shop-collection-arrow" data-collection-direction="1" aria-label="Next products" aria-controls="FlowerInkGrid-{{ section.id }}">&rarr;</button>
+        </div>
+      </div>
+
+      {% if selected_collection != blank and selected_collection.products_count > 0 %}
+        <div class="shop-collection-toolbar">
+          <span class="shop-collection-count">{{ selected_collection.title | escape }}</span>
+          <span class="shop-collection-count">{{ selected_collection.products_count }} formulas</span>
+        </div>
+        <div class="shop-product-grid" id="FlowerInkGrid-{{ section.id }}" tabindex="0" role="group" aria-label="{{ selected_collection.title | escape }}">
+          {% for product in selected_collection.products limit: product_limit %}
+            {%- liquid
+              assign selected_variant = product.selected_or_first_available_variant
+              assign featured_actives = product.metafields.custom.featured_actives.value | default: product.type
+              assign product_size = product.metafields.custom.size.value
+              assign form_id = 'FlowerInkProduct-' | append: section.id | append: '-' | append: product.id
+            -%}
+            <article class="shop-product-card">
+              <a class="shop-product-media" href="{{ product.url }}" aria-label="{{ product.title | escape }}">
+                {% if product.featured_image != blank %}
+                  {{ product.featured_image | image_url: width: 900 | image_tag: widths: '180, 360, 540, 720, 900', sizes: '(max-width: 760px) 45vw, 24vw', loading: 'lazy', alt: product.featured_image.alt }}
+                {% else %}
+                  {{ 'product-1' | placeholder_svg_tag }}
+                {% endif %}
+                {% unless product.available %}
+                  <span class="shop-product-badge">Sold out</span>
+                {% endunless %}
+              </a>
+              <div class="shop-product-info">
+                <div class="shop-product-overline">
+                  <span>{{ product.type | escape }}</span>
+                  <span>
+                    {% if product_size != blank %}{{ product_size | escape }}{% elsif product.has_only_default_variant == false %}{{ selected_variant.title | escape }}{% else %}{{ product.vendor | escape }}{% endif %}
+                  </span>
+                </div>
+                <div class="shop-product-name-row">
+                  <h3><a href="{{ product.url }}">{{ product.title | escape }}</a></h3>
+                  <span class="shop-product-price">{% if product.price_varies %}From {% endif %}{{ product.price | money }}</span>
+                </div>
+                <div class="shop-product-foot">
+                <p class="shop-product-active">{{ featured_actives | escape }}</p>
+                {% if section.settings.show_cart_button %}
+                  {% unless product.available %}
+                    <button type="button" class="shop-product-cta" disabled>Sold out</button>
+                  {% else %}
+                    {% if product.has_only_default_variant and product.requires_selling_plan == false %}
+                      {% form 'product', product, id: form_id %}
+                        <input type="hidden" name="id" value="{{ selected_variant.id }}">
+                        <input type="hidden" name="quantity" value="1">
+                        <button class="shop-product-cta" type="submit" name="add">Add to bag <span aria-hidden="true">&rarr;</span></button>
+                      {% endform %}
+                    {% else %}
+                      <a class="shop-product-cta" href="{{ product.url }}">Choose options <span aria-hidden="true">&rarr;</span></a>
+                    {% endif %}
+                  {% endunless %}
+                {% else %}
+                  <a class="shop-product-cta" href="{{ product.url }}">View formula <span aria-hidden="true">&rarr;</span></a>
+                {% endif %}
+                </div>
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+      {% elsif request.design_mode %}
+        <p class="shop-collection-subtitle">Choose a collection with products in this section's settings.</p>
+      {% endif %}
+    </div>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Flower Ink collection",
+  "tag": "section",
+  "class": "flower-ink-collection-section",
+  "settings": [
+    { "type": "collection", "id": "collection", "label": "Collection" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "The Flower Ink collection" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Your daily dose of bloom." },
+    { "type": "textarea", "id": "description", "label": "Description", "default": "Medicinal flowers. Thoughtful formulas. Find your everyday essentials." },
+    { "type": "range", "id": "products_to_show", "label": "Products to show", "min": 4, "max": 12, "step": 4, "default": 12 },
+    { "type": "checkbox", "id": "show_view_all", "label": "Show view all link", "default": false },
+    { "type": "checkbox", "id": "show_cart_button", "label": "Show add to bag buttons", "default": true },
+    { "type": "color", "id": "background_color", "label": "Background", "default": "#fffafb" },
+    { "type": "color", "id": "text_color", "label": "Text", "default": "#503044" },
+    { "type": "color", "id": "accent_color", "label": "Accent", "default": "#87536e" },
+    { "type": "range", "id": "padding_top", "label": "Top spacing", "min": 20, "max": 100, "step": 4, "default": 52 },
+    { "type": "range", "id": "padding_bottom", "label": "Bottom spacing", "min": 20, "max": 100, "step": 4, "default": 60 }
+  ],
+  "presets": [{ "name": "Flower Ink collection" }]
+}
+{% endschema %}

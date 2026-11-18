@@ -1,0 +1,34 @@
+/* Two connected chapters: the people and the place behind Flower Ink. */
+.brand-eyebrow{font:10px/1.8 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:#8d647a}
+.brand-eyebrow>span{margin:0 9px;color:#b99ba9}
+.flower-roof{padding:66px 0 64px;background:#fffafb;color:#56364b}
+.roof-layout{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(45px,7vw,110px);align-items:start}
+.atelier-page .roof-intro h2{font:400 clamp(58px,5.8vw,88px)/.94 var(--serif);letter-spacing:-.04em;margin:20px 0 30px}
+
+.roof-portrait{max-width:405px;margin:0;background:#f5e9ee;border:9px solid #f5e9ee}
+.roof-portrait>a{display:block}
+.roof-portrait img{display:block;width:100%;height:330px;object-fit:cover;object-position:center 34%}
+.roof-portrait figcaption{padding:16px 10px 9px}
+.roof-portrait figcaption strong{display:block;font:italic 400 27px/1.2 var(--serif)}
+.roof-portrait figcaption span{display:block;font:9px/1.7 var(--sans);letter-spacing:.07em;text-transform:uppercase;margin-top:7px;color:#8a697b}
+.roof-body{padding-top:6px}
+.roof-body>p{font:14px/1.85 var(--sans);color:#826b77;margin-bottom:20px}
+.roof-body .roof-lede{font:400 27px/1.38 var(--serif);letter-spacing:-.015em;color:#56364b;margin-bottom:19px}
+
+.flower-founder{background:#f0e2e9;padding:65px 0 68px;overflow:hidden;color:#5a354b}
+.founder-layout{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(40px,7vw,105px);align-items:center}
+.founder-flower{width:32px;background:#a56b86;margin-bottom:22px}
+.atelier-page .founder-note h2{font:400 clamp(40px,4.4vw,66px)/1.02 var(--serif);letter-spacing:-.03em;margin:19px 0 23px}
+.founder-copy>p{font:14px/1.85 var(--sans);color:#816575;margin:0 0 17px;max-width:580px}
+.founder-copy .founder-origin,.founder-copy .founder-closing{font:400 25px/1.3 var(--serif);color:#8f5d78;letter-spacing:-.01em}
+.founder-copy .founder-closing{margin:22px 0 0}
+.founder-signature{font:italic 400 30px/1.2 var(--serif);letter-spacing:-.02em;margin-top:27px}
+.founder-role{font:11px/1.7 var(--sans);color:#8d6e80;margin-top:6px}
+.founder-link{display:inline-flex;align-items:center;justify-content:space-between;gap:30px;margin-top:24px;border-bottom:1px solid #9a607e80;padding:0 0 8px;font:12px/1.5 var(--sans)}
+.founder-link>span{font-size:20px}
+.founder-link:hover{color:#a15d80}
+.founder-portrait{position:relative;max-width:385px;width:100%;padding:11px;background:#fffaf8;transform:rotate(3deg);box-shadow:0 12px 35px #6a405315;justify-self:center}
+.founder-portrait img{display:block;width:100%;height:410px;object-fit:cover;object-position:center 28%}
+@media(max-width:1100px){.roof-layout{gap:45px}.roof-portrait img{height:315px}.roof-body .roof-lede{font-size:24px}.roof-body>p{font-size:13px}.founder-portrait img{height:365px}.founder-copy>p{font-size:13px}}
+@media(max-width:760px){.flower-roof{padding:43px 0}.brand-eyebrow{font-size:9px;letter-spacing:.09em}.roof-layout{grid-template-columns:1fr;gap:28px}.atelier-page .roof-intro h2{font-size:65px;margin:17px 0 25px}.roof-portrait{max-width:none;margin:0 0 0 24px;border-width:8px}.roof-portrait img{height:330px;object-position:center 29%}.roof-portrait figcaption{padding:14px 8px 7px}.roof-portrait figcaption strong{font-size:26px}.roof-portrait figcaption span{font-size:8px}.roof-body{padding-top:0}.roof-body .roof-lede{font-size:25px;line-height:1.35}.roof-body>p{font-size:13px;line-height:1.85;margin-bottom:19px}.roof-body>p:last-child{margin-bottom:0}.flower-founder{padding:39px 0 43px}.founder-layout{grid-template-columns:1fr;gap:35px}.founder-flower{width:29px;margin-bottom:18px}.atelier-page .founder-note h2{font-size:46px;margin:17px 0 21px}.founder-copy>p{font-size:13px;line-height:1.85;margin-bottom:17px}.founder-copy .founder-origin,.founder-copy .founder-closing{font-size:24px}.founder-signature{font-size:29px;margin-top:25px}.founder-role{font-size:10px}.founder-link{font-size:11px;margin-top:21px;gap:24px}.founder-portrait{width:calc(100% - 18px);max-width:365px;padding:9px;transform:rotate(2deg)}.founder-portrait img{height:355px;object-position:center 29%}}
+@media(max-width:359px){.atelier-page .roof-intro h2{font-size:58px}.roof-portrait{margin-left:12px}.roof-portrait img{height:300px}.atelier-page .founder-note h2{font-size:40px}.founder-portrait img{height:320px}.roof-body .roof-lede{font-size:23px}}

@@ -1,0 +1,115 @@
+/* Flower Ink: soft florals, rose tones, and a considered beauty ritual. */
+.atelier-page{--ink:#4c2c39;--mute:#826971;--line:rgba(100,51,72,.16);--accent:#924c65;background:#fffafb;color:var(--ink)}
+.atelier-wrap{width:100%;max-width:1480px;margin:0 auto;padding:0 clamp(22px,4.8vw,76px)}
+.atelier-page h2{font:400 clamp(36px,3.5vw,52px)/1.08 var(--serif);letter-spacing:-.025em}
+.atelier-page p{max-width:none}
+.atelier-label{font:12px/1.5 var(--sans);letter-spacing:.09em;text-transform:uppercase;color:var(--mute)}
+.atelier-button{display:inline-flex;align-items:center;justify-content:center;gap:28px;min-height:48px;padding:13px 27px;background:var(--accent);border:1px solid var(--accent);border-radius:30px;color:white;font:13px/1.5 var(--sans);transition:background .2s,border-color .2s}
+.atelier-button:hover{background:#74394f;border-color:#74394f}
+.atelier-button::after{content:'\2197';font-size:19px;line-height:1}
+.atelier-link{display:inline-flex;align-items:center;gap:20px;font:13px/1.5 var(--sans);border-bottom:1px solid currentColor;padding:4px 0}
+.atelier-link:hover{color:var(--accent)}
+.atelier-hero{padding-top:0;background:#f6e7eb;padding-bottom:20px}
+.atelier-intro{text-align:center;padding:29px 24px 30px;background-image:linear-gradient(#f6e7eb99,#f6e7eb99),url('img/petals.jpg');background-size:cover;background-position:center 58%;background-blend-mode:normal,multiply;background-color:#f6e7eb}
+.atelier-hero-flower{display:inline-block;width:29px;background:#b16e86;margin-bottom:11px}
+.atelier-intro .atelier-label{font-size:10px;letter-spacing:.15em;margin-bottom:15px;color:#8c5e70}
+.atelier-intro h1{font:400 clamp(45px,4.7vw,73px)/.98 var(--serif);letter-spacing:-.03em;margin:0 auto 20px;color:var(--ink)}
+.atelier-intro h1 em{font-weight:400;color:var(--accent)}
+.atelier-intro>p:not(.atelier-label){font:14px/1.8 var(--sans);color:#765964;margin:0 auto 21px;max-width:600px}
+.atelier-hero-actions{display:flex;justify-content:center;gap:30px;align-items:center}
+.atelier-panorama{position:relative;margin:0 clamp(14px,2.5vw,40px);height:clamp(270px,24vw,355px);overflow:hidden;background:#e5d3dc;border-radius:8px}
+.atelier-panorama img{width:100%;height:100%;object-fit:cover;object-position:50% 50%;filter:brightness(1.16) saturate(.82)}
+.atelier-panorama figcaption{position:absolute;bottom:22px;left:27px;font:11px/1.5 var(--sans);letter-spacing:.04em;color:white;text-shadow:0 1px 9px #38242a}
+.atelier-promise{display:flex;justify-content:center;flex-wrap:wrap;gap:12px 35px;align-items:center;padding:21px 22px;border-bottom:1px solid var(--line);font:12px/1.6 var(--sans);color:var(--mute);background:#fff7f9}
+.atelier-promise span{display:flex;align-items:center;gap:10px}
+.atelier-promise span::before{content:'\2713';font-size:12px;color:var(--accent)}
+.atelier-products{padding:75px 0 72px}
+.atelier-section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:25px;margin-bottom:28px}
+.atelier-section-head h2{margin-top:10px}
+.atelier-section-head .atelier-label{font-size:11px}
+.atelier-product-controls{display:flex;align-items:center;gap:25px;padding-bottom:4px;flex-shrink:0}
+.atelier-product-controls>a{font-size:13px;text-transform:none;letter-spacing:0}
+.atelier-arrows{display:flex;gap:4px}
+.atelier-arrows button{display:grid;place-items:center;width:42px;height:42px;border:1px solid var(--line);border-radius:50%;font:22px/1 var(--sans);transition:background .2s}
+.atelier-arrows button:hover{background:#f1e9ed}
+.atelier-tabs{display:flex;gap:28px;border-bottom:1px solid var(--line);margin-bottom:26px;overflow-x:auto}
+.atelier-tabs button{font:13px/1.5 var(--sans);padding:10px 0 12px;white-space:nowrap;border-bottom:2px solid transparent;color:var(--mute)}
+.atelier-tabs button[aria-pressed=true]{border-color:var(--accent);color:var(--ink)}
+.atelier-tabs button:hover{color:var(--accent)}
+.atelier-products .track{display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:9px;align-items:stretch}
+.atelier-products .track .card{flex:0 0 calc((100% - 72px)/4);min-width:0;scroll-snap-align:start;display:flex;flex-direction:column}
+.atelier-products .card figure{aspect-ratio:1/1.12;overflow:hidden;position:relative;border-radius:7px;background:#f3edee}
+.atelier-products .card figure>a{display:block;height:100%}
+.atelier-products .card img{display:block;width:100%;height:100%;object-fit:cover;filter:none;transition:transform .65s}
+.atelier-products .card:hover img{transform:scale(1.035)}
+.atelier-products .product-label{display:none}
+.atelier-products .quick-add{width:40px;height:40px;right:12px;bottom:12px;background:#fffafb;color:var(--ink);font:24px/1 var(--sans);border-radius:50%;box-shadow:none}
+.atelier-products .quick-add:hover{background:var(--accent);color:#fff}
+.atelier-products .card .step{font:11px/1.6 var(--sans);color:var(--mute);text-transform:none;letter-spacing:0;margin:17px 0 7px;min-height:35px}
+.atelier-products .card h3{font:400 25px/1.12 var(--serif);letter-spacing:-.015em;max-width:none;margin:0 0 9px;min-height:84px}
+.atelier-products .product-bottom{display:flex;flex-direction:column;gap:8px;align-items:flex-start;justify-content:flex-start;margin-top:auto}
+.atelier-products .card .act{font:12px/1.6 var(--sans);color:var(--mute);margin:0}
+.atelier-products .card .act::before{display:none}
+.atelier-products .card .from{font:14px/1.5 var(--sans);color:var(--ink);margin:0}
+.atelier-discover{padding:0 0 72px}
+.atelier-discover-head{text-align:center;margin-bottom:30px}
+.atelier-discover-head>p{font:14px/1.8 var(--sans);color:var(--mute);margin-top:13px}
+.atelier-collections{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+.atelier-collection{display:block;position:relative;overflow:hidden;min-height:435px;background:#e6dce3;border-radius:8px}
+.atelier-collection img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 55%;transition:transform .7s}
+.atelier-collection:hover img{transform:scale(1.025)}
+.atelier-collection::after{content:'';position:absolute;inset:45% 0 0;background:linear-gradient(transparent,#231522b8)}
+.atelier-collection-copy{position:absolute;bottom:29px;left:31px;right:31px;z-index:1;color:white;display:flex;justify-content:space-between;align-items:flex-end;gap:20px}
+.atelier-collection-copy small{display:block;font:11px/1.5 var(--sans);letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
+.atelier-collection-copy h3{font:400 43px/1 var(--serif);letter-spacing:-.02em;color:white}
+.atelier-collection-copy>span:last-child{display:grid;place-items:center;border:1px solid #ffffff80;width:42px;height:42px;font:23px/1 var(--sans)}
+.atelier-science{background:#f5e9ee;padding:62px 0}
+.atelier-science-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,7vw,110px);align-items:center}
+.atelier-science-photo{height:510px;overflow:hidden;border-radius:8px}
+.atelier-science-photo img{width:100%;height:100%;object-fit:cover;object-position:center 66%}
+.atelier-science-copy{max-width:460px}
+.atelier-science-copy h2{font-size:clamp(39px,3.7vw,55px);margin:18px 0 23px}
+.atelier-science-copy>p:not(.atelier-label){font:15px/1.85 var(--sans);color:var(--mute);margin-bottom:23px}
+.atelier-science-points{margin:25px 0 27px}
+.atelier-science-points li{display:flex;align-items:center;gap:15px;padding:13px 0;border-top:1px solid var(--line);font:13px/1.6 var(--sans)}
+.atelier-science-points li::before{content:'\2713';color:var(--accent)}
+.atelier-ritual{padding:54px 0;border-bottom:1px solid var(--line);background:#86465e;color:#fff8fa}
+.atelier-ritual p{color:#f0dce5!important}
+.atelier-ritual .atelier-button{background:#fff4f7;border-color:#fff4f7;color:#74394f}
+.atelier-ritual .atelier-button:hover{background:#f1d6e1;border-color:#f1d6e1}
+.atelier-ritual-inner{display:flex;align-items:center;justify-content:space-between;gap:35px}
+.atelier-ritual h2{font-size:clamp(30px,3vw,43px);max-width:650px}
+.atelier-ritual p{font:14px/1.8 var(--sans);color:var(--mute);margin-top:13px}
+.atelier-ritual .atelier-button{flex-shrink:0}
+.atelier-story{padding:75px 0}
+.atelier-story-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:clamp(35px,8vw,130px);align-items:center;max-width:1150px;margin:auto}
+.atelier-founder-photo{height:360px;background:#eeeae8;overflow:hidden;border-radius:8px}
+.atelier-founder-photo img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.atelier-story blockquote{font:400 clamp(32px,3.3vw,47px)/1.12 var(--serif);letter-spacing:-.02em;margin:17px 0 21px;max-width:600px}
+.atelier-story .atelier-founder{font:13px/1.8 var(--sans);color:var(--mute);margin-bottom:20px}
+.atelier-story .atelier-link{font-size:13px}
+.atelier-values{padding:23px 22px;background:#f7e5ec;text-align:center;font:13px/1.8 var(--sans);color:var(--accent)}
+.atelier-values>p{margin:auto;max-width:750px}
+.atelier-join{background:#fbeff3;padding:55px 0;color:var(--ink)}
+.atelier-join #join-in{display:grid;grid-template-columns:1fr 1fr;column-gap:75px;align-items:center}
+.atelier-join h2{grid-column:1;grid-row:1;font-size:42px;max-width:480px}
+.atelier-join #join-in>p:not(.formnote){grid-column:1;grid-row:2;font:14px/1.8 var(--sans);color:var(--mute);margin:12px 0 0;max-width:440px!important}
+.atelier-join .form{grid-column:2;grid-row:1;width:100%;max-width:500px;margin:0;border-color:var(--ink);align-self:end}
+.atelier-join .form input{font:14px/1.5 var(--sans);padding:14px 0;color:var(--ink)}
+.atelier-join .form button{font:13px/1.5 var(--sans);letter-spacing:0;text-transform:none;white-space:nowrap;color:var(--ink)}
+.atelier-join .formnote{grid-column:2;grid-row:2;font:11px/1.7 var(--sans);color:var(--mute);max-width:500px;margin:12px 0 0;text-align:left;align-self:start}
+footer.site{background:#f4e5ea;color:#4c2c39;border-top:1px solid #74394f26;padding-top:52px}
+footer.site h2{font-size:11px;color:#826971}
+footer.site ul{font-size:13px;line-height:2.25}
+footer.site .footer-intro{font-size:13px;line-height:1.8;color:#826971;max-width:240px}
+footer.site .footer-flower{background:#b16e86}
+footer.site .fbase{border-color:#74394f26;color:#826971;font-size:10px;line-height:1.8;gap:15px 25px}
+@media(max-width:1100px){.atelier-intro h1{font-size:59px}.atelier-products .card h3{font-size:16px;min-height:68px}.atelier-products .card .act{font-size:11px}.atelier-collection{min-height:365px}.atelier-science-photo{height:470px}.atelier-science-grid{gap:45px}.atelier-science-copy>p:not(.atelier-label){font-size:14px}.atelier-science-points li{font-size:12px}.atelier-join #join-in{column-gap:40px}.atelier-join h2{font-size:36px}}
+@media(max-width:760px){.atelier-hero{padding-top:30px}.atelier-intro{padding:0 23px 27px}.atelier-intro .atelier-label{font-size:9px;margin-bottom:15px;letter-spacing:.12em}.atelier-intro h1{font-size:clamp(42px,9.8vw,61px);line-height:1.02;max-width:520px;margin-bottom:17px}.atelier-intro h1 em{display:block}.atelier-intro>p:not(.atelier-label){font-size:13px;line-height:1.8;max-width:350px;margin-bottom:20px}.atelier-hero-actions{gap:23px}.atelier-button{min-height:46px;padding:12px 20px;font-size:12px;gap:20px}.atelier-link{font-size:12px;gap:13px}.atelier-panorama{margin:0 14px;height:290px}.atelier-panorama img{object-position:46% center}.atelier-panorama figcaption{font-size:9px;left:16px;bottom:15px}.atelier-promise{display:grid;grid-template-columns:1fr 1fr;gap:12px 19px;padding:20px 22px;font-size:10px;line-height:1.5}.atelier-promise span{gap:8px}.atelier-products{padding:45px 0}.atelier-section-head{gap:18px;margin-bottom:18px}.atelier-section-head .atelier-label{font-size:9px}.atelier-section-head h2{font-size:37px;max-width:300px;margin-top:10px}.atelier-product-controls{gap:0;align-self:flex-end}.atelier-product-controls>a{display:none}.atelier-arrows{gap:5px}.atelier-arrows button{width:35px;height:35px;font-size:19px}.atelier-tabs{gap:22px;margin-bottom:23px}.atelier-tabs button{font-size:12px;padding:9px 0 11px}.atelier-products .track{gap:16px}.atelier-products .track .card{flex-basis:calc((100% - 16px)/2)}.atelier-products .card figure{aspect-ratio:1/1.13}.atelier-products .card .step{font-size:10px;line-height:1.5;margin:13px 0 6px;min-height:45px}.atelier-products .card h3{font-size:14px;line-height:1.4;min-height:80px;margin-bottom:8px}.atelier-products .card .act{font-size:10px;min-height:32px}.atelier-products .card .from{font-size:13px}.atelier-products .product-bottom{gap:7px}.atelier-products .quick-add{width:33px;height:33px;right:8px;bottom:8px;font-size:23px}.atelier-discover{padding-bottom:45px}.atelier-discover-head{margin-bottom:23px}.atelier-discover-head h2{font-size:37px}.atelier-discover-head>p{font-size:13px;margin-top:12px}.atelier-collections{gap:16px}.atelier-collection{min-height:310px}.atelier-collection-copy{left:17px;right:17px;bottom:20px;gap:10px}.atelier-collection-copy small{font-size:8px;letter-spacing:.06em;margin-bottom:8px}.atelier-collection-copy h3{font-size:30px}.atelier-collection-copy>span:last-child{width:30px;height:30px;font-size:19px;flex-shrink:0}.atelier-science{padding:30px 0 38px}.atelier-science-grid{grid-template-columns:1fr;gap:30px}.atelier-science-photo{height:380px}.atelier-science-copy{max-width:none}.atelier-science-copy h2{font-size:43px;margin:14px 0 19px}.atelier-science-copy>.atelier-label{font-size:10px}.atelier-science-copy>p:not(.atelier-label){font-size:14px}.atelier-science-points{margin:22px 0 25px}.atelier-science-points li{font-size:12px;padding:12px 0}.atelier-ritual{padding:36px 0}.atelier-ritual-inner{display:block}.atelier-ritual h2{font-size:35px;max-width:450px}.atelier-ritual p{font-size:13px;margin:13px 0 20px}.atelier-story{padding:45px 0}.atelier-story-grid{grid-template-columns:1fr;gap:26px}.atelier-founder-photo{height:290px;max-width:450px}.atelier-founder-photo img{object-position:center 28%}.atelier-story blockquote{font-size:37px;margin:15px 0 20px}.atelier-story .atelier-label{font-size:10px}.atelier-story .atelier-founder{font-size:12px}.atelier-values{padding:20px 23px;font-size:12px}.atelier-join{padding:37px 0 40px}.atelier-join #join-in{display:block}.atelier-join h2{font-size:37px}.atelier-join #join-in>p:not(.formnote){font-size:13px;margin:14px 0 25px}.atelier-join .form{max-width:none}.atelier-join .form input{font-size:13px}.atelier-join .form button{font-size:12px}.atelier-join .formnote{font-size:10px;max-width:none;margin-top:13px}footer.site{padding-top:35px}footer.site ul{font-size:12px}footer.site .footer-intro{font-size:12px}footer.site h2{font-size:10px}footer.site .fbase{font-size:10px}}
+@media(max-width:760px){.atelier-intro .desktop-break{display:none}}
+@media(max-width:440px){.atelier-collections{grid-template-columns:1fr;gap:18px}.atelier-collection{min-height:340px}.atelier-collection img{object-position:center 55%}.atelier-collection-copy{left:24px;right:24px;bottom:24px}.atelier-collection-copy h3{font-size:38px}.atelier-collection-copy small{font-size:10px}.atelier-collection-copy>span:last-child{width:40px;height:40px;font-size:23px}}
+@media(max-width:359px){.atelier-intro h1{font-size:41px}.atelier-intro>p:not(.atelier-label){font-size:12px}.atelier-hero-actions{gap:18px}.atelier-button{font-size:11px;padding:12px 16px;gap:17px}.atelier-hero-actions .atelier-link{font-size:11px;gap:9px}.atelier-panorama{height:250px}.atelier-promise{font-size:9px;gap:12px}.atelier-section-head h2{font-size:32px}.atelier-arrows button{width:31px;height:34px}.atelier-tabs{gap:18px}.atelier-tabs button{font-size:11px}.atelier-products .track .card{flex-basis:76%}.atelier-products .card h3{min-height:60px;font-size:16px}.atelier-products .card .step{min-height:30px;font-size:11px}.atelier-products .card .act{min-height:0;font-size:11px}.atelier-science-photo{height:330px}}
+@media(max-width:1100px){.atelier-products .card h3{font-size:23px;min-height:84px}}
+@media(max-width:760px){.atelier-hero{padding-top:0;padding-bottom:15px}.atelier-intro{padding:28px 23px 27px;background-position:58% center}.atelier-hero-flower{width:26px;margin-bottom:10px}.atelier-intro h1{font-size:clamp(42px,10.8vw,61px);line-height:1.02;margin-bottom:18px}.atelier-intro h1 em{display:inline}.atelier-intro .atelier-label{font-size:9px;margin-bottom:15px}.atelier-products .card h3{font-size:21px;min-height:94px;line-height:1.12}.atelier-panorama{height:275px}.atelier-products .quick-add{border-radius:50%}}
+@media(max-width:760px){.atelier-intro{background-image:none}}
+@media(max-width:359px){.atelier-intro h1{font-size:38px}.atelier-intro>p:not(.atelier-label){font-size:12px}.atelier-panorama{height:245px}.atelier-products .card h3{font-size:23px;min-height:60px}}

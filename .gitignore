@@ -1,0 +1,11 @@
+node_modules/
+.qa/
+.recovery/
+.env
+.env.*
+!.env.example
+*.log
+flower-ink-restored-backup.zip
+.DS_Store
+Thumbs.db
+desktop.ini

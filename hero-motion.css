@@ -1,0 +1,19 @@
+/* Visible, brisk floating and right-to-left product transitions. */
+.fi-motion-hero{height:auto}
+.fi-motion-hero .fi-hero-pin{position:relative;top:auto}
+.fi-hero-bottle{transform:translate(-50%,-50%) rotate(8deg)}
+.fi-hero-bottle>.fi-hero-float{position:relative}
+.fi-hero-bottle-slide{position:absolute;inset:0;display:block;opacity:0;visibility:hidden;transform:translateX(260px);transition:transform .55s cubic-bezier(.22,.65,.3,1),opacity .45s,visibility .55s;pointer-events:none}
+.fi-hero-bottle-slide.is-active{opacity:1;visibility:visible;transform:translateX(0);pointer-events:auto}
+.fi-hero-bottle-slide.is-leaving{opacity:0;visibility:visible;transform:translateX(-140px)}
+
+.fi-motion-hero.bottles-paused .fi-hero-float{animation-play-state:paused}
+.fi-hero-bottle>.fi-hero-float{animation:fi-bottle-drift 3s ease-in-out infinite;will-change:transform}
+.fi-hero-card-one>.fi-hero-float{animation:fi-card-drift 3.4s ease-in-out -.8s infinite;will-change:transform}
+.fi-hero-card-two>.fi-hero-float{animation:fi-card-drift 3.8s ease-in-out -1.9s infinite reverse;will-change:transform}
+@keyframes fi-bottle-drift{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-26px) rotate(2deg)}}
+@keyframes fi-card-drift{0%,100%{transform:translateY(0) rotate(-1.5deg)}50%{transform:translateY(-18px) rotate(1.5deg)}}
+@media(max-width:760px){.fi-hero-bottle{transform:translate(-50%,-50%) rotate(5deg)}@keyframes fi-bottle-drift{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-16px) rotate(2deg)}}@keyframes fi-card-drift{0%,100%{transform:translateY(0) rotate(-1.5deg)}50%{transform:translateY(-11px) rotate(1.5deg)}}}
+@media(prefers-reduced-motion:reduce){.fi-motion-hero .fi-hero-float{animation:none;will-change:auto}}
+@media(max-width:760px){.fi-hero-bottle-slide{transform:translateX(140px)}.fi-hero-bottle-slide.is-active{transform:translateX(0)}.fi-hero-bottle-slide.is-leaving{transform:translateX(-85px)}}
+@media(prefers-reduced-motion:reduce){.fi-hero-bottle-slide{transition:none}}

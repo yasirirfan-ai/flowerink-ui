@@ -1,0 +1,35 @@
+/* Supplied campaign copy, laid out as a complete client presentation. */
+.fi-hero-visuals{position:absolute;inset:0}
+.fi-hero-copy{position:absolute;z-index:5;left:4.8%;top:50%;width:46%;max-width:660px;transform:translateY(-50%);text-align:left;color:var(--hero-ink)}
+.fi-hero-eyebrow{font:10px/1.7 var(--sans);letter-spacing:.06em;margin:0 0 24px;color:#80697f;max-width:580px!important}
+.fi-hero-eyebrow strong{font-weight:600}
+.fi-hero-overline{font:italic 400 35px/1.1 var(--serif);letter-spacing:-.015em;margin-bottom:11px}
+.fi-hero-heading{position:static;inset:auto;pointer-events:auto;display:block;margin:0 0 23px}
+.fi-hero-copy .fi-hero-title,.fi-hero-copy .fi-hero-script{display:block;position:static;transform:none;white-space:normal;text-align:left;letter-spacing:-.03em}
+.fi-hero-copy .fi-hero-title{font:500 clamp(35px,3.9vw,62px)/1.08 var(--sans);letter-spacing:-.04em}
+.fi-hero-copy .fi-hero-script{font:500 italic clamp(42px,4.8vw,76px)/1.04 var(--serif)}
+.fi-hero-copy .fi-hero-description{position:static;top:auto;left:auto;width:auto;max-width:580px;margin:0 0 27px;transform:none;text-align:left;font:400 14px/1.85 var(--sans)}
+.fi-hero-description p+p{margin-top:18px}
+.fi-hero-copy .fi-hero-cta{position:static;transform:none}
+.fi-hero-cta a{font-size:14px;min-height:53px;padding:14px 31px}
+.fi-hero-sparkle{left:49%;top:14%;width:42px}
+.has-scroll-effect .fi-hero-bottle{left:calc(64% + 1.5%*var(--hero-scroll))}
+.fi-hero-bottle{left:64%}
+.fi-hero-card-one{left:82%}
+.fi-hero-card-two{left:89%}
+.has-scroll-effect .fi-hero-copy{transform:translateY(calc(-50% + 12px*(1 - var(--hero-scroll))))}
+.fi-hero-copy .fi-hero-title,.fi-hero-copy .fi-hero-script,.fi-hero-copy .fi-hero-description{transform:none}
+@media(max-width:1100px){.fi-hero-copy{left:4.5%;width:47%}.fi-hero-eyebrow{font-size:9px;margin-bottom:20px}.fi-hero-overline{font-size:31px}.fi-hero-copy .fi-hero-title{font-size:clamp(31px,3.8vw,44px)}.fi-hero-copy .fi-hero-script{font-size:clamp(40px,4.7vw,55px)}.fi-hero-copy .fi-hero-description{font-size:12px;line-height:1.8;margin-bottom:23px}.fi-hero-heading{margin-bottom:20px}.fi-hero-description p+p{margin-top:15px}.fi-hero-sparkle{width:32px;left:50%;top:12%}}
+@media(max-width:760px){.fi-motion-hero.has-scroll-effect{height:auto}.fi-hero-pin,.has-scroll-effect .fi-hero-pin{height:auto;min-height:0;position:relative;top:0}.fi-hero-canvas{position:relative}.fi-hero-visuals{position:relative;height:365px}.fi-hero-bottle,.has-scroll-effect .fi-hero-bottle{left:34%;top:50%;height:83%;width:47%}.fi-hero-card-one{left:72%;top:26%}.fi-hero-card-two{left:81%;top:72%}.fi-hero-sparkle{left:7%;top:80%;width:32px}.fi-hero-copy,.has-scroll-effect .fi-hero-copy{position:relative;left:auto;top:auto;width:auto;max-width:600px;padding:16px 25px 39px;margin:auto;transform:none}.fi-hero-eyebrow{font-size:9px;line-height:1.8;margin-bottom:19px;max-width:350px!important}.fi-hero-eyebrow>span:last-child{display:block}.fi-hero-eyebrow>span[aria-hidden]{display:none}.fi-hero-overline{font-size:31px;margin-bottom:10px}.fi-hero-copy .fi-hero-title{font-size:clamp(32px,8.5vw,48px)}.fi-hero-copy .fi-hero-script{font-size:clamp(42px,11.3vw,62px)}.fi-hero-heading{margin-bottom:21px}.fi-hero-copy .fi-hero-description{font-size:13px;line-height:1.85;margin-bottom:25px}.fi-hero-description p+p{margin-top:17px}.fi-hero-cta a{font-size:13px;min-height:49px;padding:13px 28px}}
+@media(max-width:359px){.fi-hero-visuals{height:325px}.fi-hero-copy,.has-scroll-effect .fi-hero-copy{padding-left:21px;padding-right:21px}.fi-hero-eyebrow{font-size:8px}.fi-hero-copy .fi-hero-title{font-size:30px}.fi-hero-copy .fi-hero-script{font-size:39px}.fi-hero-copy .fi-hero-description{font-size:12px}.fi-hero-overline{font-size:29px}}
+@media(prefers-reduced-motion:reduce){.has-scroll-effect .fi-hero-copy{transform:translateY(-50%)}.has-scroll-effect .fi-hero-bottle{left:64%}}
+@media(prefers-reduced-motion:reduce) and (max-width:760px){.has-scroll-effect .fi-hero-copy{transform:none}.has-scroll-effect .fi-hero-bottle{left:34%;top:50%}}
+
+/* A petal-shaped story button with a fine inset border and arrow medallion. */
+.fi-hero-copy .fi-hero-cta a{position:relative;gap:27px;min-height:58px;padding:7px 8px 7px 25px;border:1px solid #b78b9e;border-radius:9px 32px 32px 32px;background:#fffafcbd;color:#78465e;box-shadow:0 7px 22px #814b6212,inset 0 1px 0 #ffffffd9;font:600 13px/1.5 var(--sans);letter-spacing:.025em;transition:background .2s,color .2s,border-color .2s}
+.fi-hero-copy .fi-hero-cta a::before{content:'';position:absolute;inset:4px;border:1px solid #ffffffba;border-radius:5px 28px 28px 28px;pointer-events:none}
+.fi-hero-copy .fi-hero-cta a::after{content:'\2197';display:grid;place-items:center;width:40px;height:40px;flex:0 0 40px;border-radius:50%;background:#8b526b;color:#fff7fb;font:23px/1 var(--sans)}
+.fi-hero-copy .fi-hero-cta a:hover{background:#8b526b;color:#fff7fb;border-color:#8b526b}
+.fi-hero-copy .fi-hero-cta a:hover::after{background:#fff5f9;color:#8b526b}
+.fi-hero-copy .fi-hero-cta a:focus-visible{outline:2px solid #78465e;outline-offset:5px}
+@media(max-width:760px){.fi-hero-copy .fi-hero-cta a{min-height:54px;padding:6px 7px 6px 22px;gap:23px;font-size:13px}.fi-hero-copy .fi-hero-cta a::after{width:36px;height:36px;flex-basis:36px;font-size:21px}}

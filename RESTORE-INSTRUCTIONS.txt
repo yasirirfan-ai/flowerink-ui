@@ -1,0 +1,28 @@
+FLOWER INK LOCAL PREVIEW
+
+Start from this folder:
+  npm run dev
+
+Open:
+  http://localhost:8080
+
+Node.js 18 or newer is required. No npm install is needed.
+Keep index.html, the CSS/JS files, img, package.json, and scripts together.
+Ctrl+C stops the preview server; it does not remove project files.
+
+RECOVERY
+The missing presentation was recovered from its saved edits and image previews.
+The original generated hero cutouts and bright makeup image were restored.
+Some original product and portrait images were recovered at preview resolution.
+The recovered-product-photos.svg file uses the saved photographs without
+replacing their contents with newly generated product images.
+
+The newsletter remains a local presentation form, without a mailing service.
+The Shopify section package is separate and has not been installed on Shopify.
+
+If files are lost again, clone https://github.com/yasirirfan-ai/flowerink-ui.git
+and run npm run dev from that folder. A separately saved copy of
+flower-ink-restored-backup.zip can also be extracted to restore the presentation.
+
+The source repository excludes temporary QA screenshots, recovery logs,
+browser profiles, dependencies, and the duplicate full-site backup ZIP.

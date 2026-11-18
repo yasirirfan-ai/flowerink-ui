@@ -1,0 +1,27 @@
+/* Base product composition; the optional scroll enhancement is separate. */
+.fi-motion-hero{--hero-height:calc(100svh - 89px);--hero-ink:#6a4c69;position:relative;color:var(--hero-ink)}
+.fi-hero-pin{height:var(--hero-height);min-height:560px;position:relative;overflow:hidden;isolation:isolate;background:#fbf5f7}
+.fi-hero-wash{position:absolute;inset:-80px;z-index:-1;background:radial-gradient(ellipse at 17% 20%,#ece5f4 0%,transparent 51%),radial-gradient(ellipse at 84% 76%,#f3dfe8 0%,transparent 50%),#fdf9f8;pointer-events:none}
+.fi-hero-canvas{position:absolute;inset:0;max-width:1700px;margin:auto}
+.fi-hero-bottle{position:absolute;z-index:3;left:61%;top:52%;width:25%;height:79%;transform:translate(-50%,-50%);filter:drop-shadow(15px 32px 24px #68435724)}
+.fi-hero-bottle>.fi-hero-float{width:100%;height:100%}
+.fi-hero-bottle img{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:auto;max-width:none;height:115%;object-fit:contain;display:block}
+.fi-hero-float{display:block}
+.fi-hero-card{position:absolute;z-index:4;width:13%;max-width:205px;transform:translate(-50%,-50%) rotate(var(--card-rotation));outline-offset:6px}
+.fi-hero-card>.fi-hero-float{position:relative;overflow:hidden;border-radius:17px;box-shadow:0 18px 38px #6e495530,0 0 0 3px #ffffffd9;background:#fff7fa}
+.fi-hero-card img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
+.fi-hero-card-label{display:block;position:absolute;bottom:0;left:0;right:0;padding:8px 7px;background:#fff9f3e6;text-align:center;font:10px/1.4 var(--sans);color:#6a4c69}
+.fi-hero-card-one{--card-rotation:7deg;left:80%;top:29%}
+.fi-hero-card-two{--card-rotation:-6deg;left:87%;top:68%}
+.fi-hero-heading{margin:0;position:absolute;inset:0;pointer-events:none;font-weight:400;text-wrap:initial}
+.fi-hero-title,.fi-hero-script{position:absolute;left:26%;z-index:5;margin:0;white-space:nowrap;line-height:1;letter-spacing:-.04em;text-align:center;transform:translate(-50%,-50%);color:var(--hero-ink)}
+.fi-hero-title{top:36%;font:600 clamp(62px,6.3vw,104px)/1 var(--sans);letter-spacing:-.05em}
+.fi-hero-script{top:48%;font:500 italic clamp(76px,7.7vw,124px)/.95 var(--serif);letter-spacing:-.045em}
+.fi-hero-description{position:absolute;z-index:5;top:65%;left:26%;width:40%;max-width:570px;margin:0;transform:translate(-50%,-50%);font:500 clamp(14px,1.25vw,19px)/1.55 var(--sans);text-align:center;color:var(--hero-ink)}
+.fi-hero-cta{position:absolute;z-index:6;left:26%;top:79%;transform:translate(-50%,-50%)}
+.fi-hero-cta a{display:inline-flex;min-height:58px;align-items:center;justify-content:center;padding:16px 36px;border-radius:99px;background:#fffcfdab;border:1px solid #ffffffa6;color:var(--hero-ink);box-shadow:0 10px 32px #5c344c15,inset 0 1px 0 #ffffffb3;backdrop-filter:blur(16px);font:600 15px/1.5 var(--sans);white-space:nowrap}
+.fi-hero-cta a:hover{background:#fff8fc}
+.fi-hero-sparkle{position:absolute;z-index:5;left:43%;top:23%;width:clamp(40px,5vw,77px);height:auto;color:var(--hero-ink);pointer-events:none}
+@media(max-width:1100px){.fi-hero-title{font-size:6.5vw}.fi-hero-script{font-size:8.2vw}.fi-hero-description{font-size:14px;max-width:450px;width:43%}.fi-hero-bottle{width:27%;height:76%}.fi-hero-card{width:14%}.fi-hero-card-label{font-size:8px}.fi-hero-cta a{font-size:13px;min-height:50px;padding:13px 28px}}
+@media(max-width:760px){.fi-motion-hero{--hero-height:calc(100svh - 73px)}.fi-hero-pin{min-height:640px}.fi-hero-bottle{left:35%;top:28%;width:47%;height:43%}.fi-hero-card{width:24%;max-width:145px}.fi-hero-card-one{left:73%;top:16%}.fi-hero-card-two{left:82%;top:37%}.fi-hero-card-label{font-size:8px;padding:6px 4px}.fi-hero-card>.fi-hero-float{border-radius:11px;box-shadow:0 13px 26px #6e495526,0 0 0 2px #ffffffde}.fi-hero-title,.fi-hero-script{left:50%}.fi-hero-title{top:57%;font-size:clamp(42px,9.7vw,65px);letter-spacing:-.04em}.fi-hero-script{top:65%;font-size:clamp(50px,12.4vw,79px);line-height:.95;letter-spacing:-.04em}.fi-hero-description{left:50%;top:77%;width:86%;max-width:450px;font-size:14px;line-height:1.55}.fi-hero-desktop-break{display:none}.fi-hero-cta{left:50%;top:90%}.fi-hero-cta a{font-size:13px;min-height:50px;padding:13px 29px}.fi-hero-sparkle{left:82%;top:52%;width:36px}}
+@media(max-width:359px){.fi-hero-pin{min-height:620px}.fi-hero-description{font-size:12px;width:88%}.fi-hero-title{font-size:36px}.fi-hero-script{font-size:43px}.fi-hero-card-label{font-size:7px}.fi-hero-sparkle{width:30px}.fi-hero-cta a{min-height:45px;font-size:12px;padding:11px 25px}}

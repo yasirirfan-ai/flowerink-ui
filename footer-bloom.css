@@ -1,0 +1,34 @@
+/* An editorial closing page: invitation, navigation, and oversized brand signature. */
+footer.site.bloom-footer{position:relative;isolation:isolate;background:#422b3a;color:#f9eee8;padding:0 0 23px;border:0}
+.bloom-footer-top{display:flex;align-items:center;justify-content:space-between;gap:25px;padding:23px 0;border-bottom:1px solid #f0d9e130}
+.bloom-footer-top p{font:400 19px/1.5 var(--serif)}
+.bloom-footer-top p em{color:#ddbacb}
+.bloom-footer .footer-top-link{display:flex;align-items:center;gap:13px;font:11px/1.5 var(--sans)}
+.footer-top-link span{display:grid;place-items:center;width:33px;height:33px;border:1px solid #ebd1dd50;border-radius:50%;font-size:19px}
+.bloom-footer-main{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(45px,8vw,125px);padding:52px 0 55px}
+.footer-invitation{min-width:0;scroll-margin-top:120px}
+.footer-kicker{display:flex;align-items:center;gap:11px;font:10px/1.6 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:#d7b8c9;margin-bottom:21px}
+.footer-kicker .flowericon{width:23px;background:#d7b8c9}
+footer.site.bloom-footer #join-in h2{font:400 clamp(34px,3.35vw,49px)/1.05 var(--serif);letter-spacing:-.025em;text-transform:none;color:#fff3ee;max-width:400px;margin:0 0 17px}
+.bloom-footer #join-in>p:not(.formnote){font:13px/1.8 var(--sans);color:#d9c1cf;max-width:350px!important;margin:0}
+.bloom-footer #join-in .form{display:flex;align-items:center;border:0;border-bottom:1px solid #e6cbd77a;max-width:440px;width:100%;margin:27px 0 0;padding-bottom:9px;gap:15px}
+.bloom-footer #join-in .form input{font:14px/1.6 var(--sans);color:#fff3ee;padding:10px 0;min-width:0}
+.bloom-footer #join-in .form input::placeholder{color:#d9c1cf}
+.bloom-footer #join-in .form input:focus-visible{outline:1px solid #e6cbd7;outline-offset:4px}
+.bloom-footer #join-in .form button{background:#f2dce5;color:#4a2c3e;border-radius:25px;padding:10px 17px;font:12px/1.5 var(--sans);letter-spacing:0;text-transform:none;white-space:nowrap;min-height:40px}
+.bloom-footer #join-in .form button:hover{background:#fff3ee}
+.bloom-footer #join-in .formnote{font:10px/1.7 var(--sans);color:#c6a8ba;max-width:425px;margin:14px 0 0;text-align:left}
+.bloom-footer #join-in .formnote a{color:#f2dce5}
+.bloom-footer #join-in [aria-invalid="true"]{outline:1px solid #f5b9cb;outline-offset:3px}
+.footer-nav{display:grid;grid-template-columns:1fr 1fr;gap:30px;padding-top:8px}
+footer.site.bloom-footer .footer-link-group h2{font:10px/1.6 var(--sans);font-weight:400;text-transform:uppercase;letter-spacing:.14em;color:#c6a8ba;margin:0 0 22px}
+footer.site.bloom-footer .footer-link-group ul{font:400 clamp(18px,1.75vw,25px)/1.5 var(--serif);list-style:none}
+.footer-link-group li+li{margin-top:12px}
+.bloom-footer a:focus-visible{outline:2px solid #e0b5cd;outline-offset:5px}
+.footer-signoff{display:flex;justify-content:space-between;gap:20px;padding:20px 0 24px;border-top:1px solid #f0d9e130;font:9px/1.7 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:#d7b8c9}
+.footer-signature{display:block;padding:4px 0 32px}
+footer.site.bloom-footer .footer-signature .wordmark{width:100%!important;max-width:none;background:#edd5df}
+.bloom-footer-bottom{display:flex;justify-content:space-between;align-items:center;gap:20px;border-top:1px solid #f0d9e130;padding-top:19px;color:#c6a8ba;font:10px/1.8 var(--sans)}
+.footer-legal{display:flex;gap:23px;flex-wrap:wrap}
+@media(max-width:900px){.bloom-footer-main{gap:50px;grid-template-columns:1fr 1fr}.footer-nav{gap:22px}.footer-signoff{font-size:8px;letter-spacing:.1em}.bloom-footer-bottom{gap:14px;font-size:9px}.footer-legal{gap:14px}.bloom-footer-bottom>span:last-child{display:none}}
+@media(max-width:650px){footer.site.bloom-footer{padding-bottom:22px}.bloom-footer-top{padding:19px 0;gap:12px}.bloom-footer-top p{font-size:16px;max-width:180px}.bloom-footer .footer-top-link{font-size:10px;gap:8px;white-space:nowrap}.footer-top-link span{width:29px;height:29px;font-size:17px}.bloom-footer-main{grid-template-columns:1fr;gap:36px;padding:34px 0 31px}.footer-kicker{font-size:9px;margin-bottom:17px}.footer-kicker .flowericon{width:21px}footer.site.bloom-footer #join-in h2{font-size:40px;max-width:330px;margin-bottom:15px}.bloom-footer #join-in>p:not(.formnote){font-size:12px;max-width:330px!important}.bloom-footer #join-in .form{max-width:none;margin-top:21px}.bloom-footer #join-in .form input{font-size:13px}.bloom-footer #join-in .form button{font-size:11px;padding:10px 14px}.bloom-footer #join-in .formnote{font-size:10px}.footer-nav{padding-top:29px;border-top:1px solid #f0d9e130;gap:30px}footer.site.bloom-footer .footer-link-group h2{font-size:9px;margin-bottom:15px}footer.site.bloom-footer .footer-link-group ul{font-size:21px}.footer-link-group li+li{margin-top:11px}.footer-signoff{padding:18px 0 21px;font-size:8px;gap:20px;line-height:1.7;letter-spacing:.06em}.footer-signoff span:last-child{max-width:155px;text-align:right}.footer-signature{padding:2px 0 24px}.bloom-footer-bottom{display:block;padding-top:16px;font-size:9px}.footer-legal{gap:18px;margin-top:9px}}
