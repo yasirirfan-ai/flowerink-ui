@@ -1,4 +1,4 @@
-/* Flower Ink's single-page presentation and original product information. */
+/* Shared navigation, product information and quick views for Flower Ink. */
 (() => {
   const PRODUCTS = [
     {sku:'FIVTNPC',slug:'violet-tansy',name:'Violet Tansy Nectar Purifying Cleanser',step:1,ml:110,price:4400,img:'violet-tansy',active:'Resurfacing AHAs',when:'both',blurb:'A nectar cleanser for normal to oily skin, with resurfacing AHAs.'},
@@ -11,8 +11,7 @@
     {sku:'FICFAEC',slug:'caffeinated-flowers',name:'Caffeinated Flowers Awake Eye Cream',step:6,ml:15,price:7200,img:'caffeinated-flowers',active:'Peptides + Stem Cells',when:'am',blurb:'An eye cream that brightens and de-puffs, with peptides and stem cells.'},
     {sku:'FITIRPET',slug:'triple-indigo',name:'Triple Indigo Repair PM Eye Treatment',step:6,ml:15,price:7600,img:'triple-indigo',active:'10% Vitamin C',when:'pm',blurb:'An overnight eye treatment with 10% vitamin C.'}
   ];
-  const recovered = ['violet-tansy','jasmine-osmanthus','periwinkle-butterfly','cold-pressed-botanicals','caffeinated-flowers'];
-  const images = Object.fromEntries(PRODUCTS.map(p=>[p.img,recovered.includes(p.img)?'img/recovered-product-photos.svg#'+p.img:'img/'+p.img+'.jpg']));
+  const images = Object.fromEntries(PRODUCTS.map(p=>[p.img,'img/'+p.img+'.jpg']));
   const esc = text => String(text).replace(/[&<>"']/g, character=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[character]));
   const format = new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0});
   const FI = {
@@ -25,13 +24,34 @@
   window.FI = FI;
   window.FI_IMG = images;
   const grid = document.getElementById('track');
-  grid.innerHTML = [0,2,3,5,1,4,6,7,8].map(index=>{
+  if (grid) grid.innerHTML = [0,2,3,5,1,4,6,7,8].map(index=>{
     const p=PRODUCTS[index];
     return `<article class="card shop-product-card" data-step="${p.step}" data-sku="${p.sku}"><button type="button" class="shop-product-media" data-quick-view="${p.sku}" aria-label="View ${esc(p.name)}"><img src="${images[p.img]}" alt="${esc(p.name)} with its botanical ingredients" width="900" height="1125" loading="lazy"></button><div class="shop-product-info"><div class="shop-product-overline"><span>${FI.stepName(p.step)}</span><span>${p.ml} ml</span></div><div class="shop-product-name-row"><h3>${esc(p.name)}</h3><span class="shop-product-price">${FI.priced(p)?FI.price(p.price):'Coming soon'}</span></div><div class="shop-product-foot"><p class="shop-product-active">${esc(p.active)}</p><button type="button" class="shop-product-cta shop-product-explore" data-quick-view="${p.sku}" aria-label="View ${esc(p.name)} formula"><span aria-hidden="true">&nearr;</span></button></div></div></article>`;
   }).join('');
 
-  const aliases={skincare:'regimen',makeup:'makeup-edit','the-flowers':'science',about:'story',account:'join','ritual-finder':'join',checkout:'regimen'};
+  function openQuickView(sku) {
+    const product=FI.bySku(sku);
+    const dialog=document.getElementById('formula-quickview');
+    if(!product || !dialog)return;
+    const image=document.getElementById('quickview-image');
+    image.src=images[product.img];image.alt=product.name;
+    const values={step:FI.stepName(product.step),title:product.name,price:FI.priced(product)?FI.price(product.price):'Coming soon',description:product.blurb,active:product.active,size:product.ml+' ml',when:product.when==='pm'?'Evening':product.when==='am'?'Morning':'Morning & evening'};
+    Object.entries(values).forEach(([key,value])=>{document.getElementById('quickview-'+key).textContent=value;});
+    const add=document.getElementById('quickview-add');
+    if(add){
+      add.dataset.addToBag=product.sku;
+      add.disabled=!FI.priced(product);
+      add.innerHTML=FI.priced(product)?'Add to bag <span aria-hidden="true">&rarr;</span>':'Coming soon';
+      document.getElementById('quickview-bag-message').textContent='';
+      dialog.querySelector('.shop-quickview-launch').hidden=FI.priced(product);
+    }
+    if(!dialog.open)dialog.showModal();
+  }
+  FI.openQuickView=openQuickView;
+  const destinations={home:'index.html',skincare:'skincare.html',makeup:'makeup.html','the-flowers':'the-flowers.html',about:'about.html',account:'account.html',bag:'bag.html',checkout:'checkout.html'};
+  const aliases={'ritual-finder':'join'};
   function go(destination) {
+    if(destinations[destination]){location.assign(destinations[destination]);return;}
     const target=aliases[destination]||destination;
     const element=document.getElementById(target);
     history.replaceState(null,'','#'+target);
@@ -55,7 +75,9 @@
     if(action==='open-menu')document.getElementById('menu').showModal();
     if(action==='open-search'){renderSearch();search.showModal();searchInput.focus();}
     const result=event.target.closest('[data-search-sku]');
-    if(result){search.close();grid.querySelector(`[data-quick-view="${result.dataset.searchSku}"]`).click();}
+    if(result){search.close();openQuickView(result.dataset.searchSku);}
+    const formula=event.target.closest('[data-quick-view]');
+    if(formula)openQuickView(formula.dataset.quickView);
     const anchor=event.target.closest('a[href^="#"]');
     if(anchor){
       anchor.closest('dialog')?.close();
@@ -83,4 +105,6 @@
     message.textContent='Thank you. Your interest has been saved on this device for the preview.';
     window.FIApp.state.customer.joined=true;
   });
+  const requestedFormula=new URLSearchParams(location.search).get('formula');
+  if(requestedFormula)requestAnimationFrame(()=>openQuickView(requestedFormula));
 })();

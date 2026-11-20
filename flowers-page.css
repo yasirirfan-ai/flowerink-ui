@@ -1,0 +1,103 @@
+/* A botanical field guide: original photography, an open index, and lab notes. */
+.page-the-flowers{--fl-ink:#603f53;--fl-muted:#8b7480;--fl-green:#62715e;--fl-line:#dfd3d9;background:#fffaf7;color:var(--fl-ink)}
+.page-the-flowers .page-breadcrumb{font-size:12px}
+.fl-eyebrow{font:12px/1.7 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:#8f7084}
+.fl-button{display:inline-flex;justify-content:center;align-items:center;min-height:48px;border:1px solid #6d485e;border-radius:32px;padding:12px 24px;background:#6d485e;color:#fffaf7;text-align:center;font:500 14px/1.5 var(--sans)}
+.fl-button:hover{background:#895f78;border-color:#895f78}
+.fl-text-link{display:inline-block;font:14px/1.6 var(--sans);padding-bottom:5px;border-bottom:1px solid #b798aa;color:#714b61}
+.fl-text-link:hover{color:#a5768f}
+.fl-hero{position:relative;overflow:hidden;isolation:isolate;background:#faf5f1}
+.fl-campaign-art{position:absolute;inset:0;z-index:-1;width:100%;height:100%;object-fit:cover;object-position:center}
+.fl-hero-layout{position:relative;display:block;min-height:750px;padding-top:56px;padding-bottom:96px;text-align:center}
+.fl-hero-copy{max-width:770px;margin:0 auto;min-width:0}
+.fl-hero .fl-eyebrow{font-size:11px;letter-spacing:.13em;color:#806675}
+.atelier-page .fl-hero h1{font:400 1em/.87 var(--serif);letter-spacing:-.04em;margin:27px 0 25px;color:#57344c}
+.fl-hero h1 span{display:block;font:400 clamp(43px,4.7vw,66px)/1 var(--serif);letter-spacing:-.04em;margin-bottom:4px}
+.fl-hero h1 em{display:block;font:400 italic clamp(130px,14vw,202px)/.86 var(--serif);letter-spacing:-.055em;color:#79506a;padding:0 12px 9px 0}
+.fl-hero .fl-hero-science{font:400 clamp(23px,2.3vw,32px)/1.3 var(--sans);letter-spacing:-.035em;color:#67435c;max-width:none}
+.fl-hero .fl-hero-description{font:15px/1.9 var(--sans);color:#8e7384;margin-top:22px}
+.fl-hero-actions{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;margin-top:26px}
+.fl-hero .fl-button{gap:12px;padding:14px 25px;background:#68425b;border-color:#68425b;min-height:53px;box-shadow:0 8px 24px #53394b12}
+.fl-hero .fl-button:hover{background:#875974}
+.fl-hero .fl-button .flowericon{width:19px;flex-shrink:0;color:#e9d9e3}
+.fl-hero .fl-text-link{font-size:13px;color:#8a657d;border-color:#bc97ad}
+
+.fl-library{padding:70px 0 75px;scroll-margin-top:105px}
+.fl-section-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:35px}
+.atelier-page .fl-section-heading h2{font:400 clamp(43px,4.5vw,63px)/1.02 var(--serif);letter-spacing:-.03em;margin-top:15px}
+.fl-section-heading h2 em{color:#a17089}
+.fl-section-heading>p{font:14px/1.8 var(--sans);color:var(--fl-muted);max-width:360px;padding-bottom:4px}
+.fl-library-layout{display:grid;grid-template-columns:.9fr 1.1fr;align-items:start;gap:8%}
+.fl-library-index{min-width:0;padding-top:5px}
+.fl-search-field label{display:block;font:14px/1.6 var(--sans);color:#7c6573;margin-bottom:10px}
+.fl-search-field input{display:block;width:100%;border:0;border-bottom:1px solid #bba3b2;background:transparent;border-radius:0;padding:10px 0 13px;font:16px/1.6 var(--sans);color:#68475c;outline-offset:5px}
+.fl-search-field input::placeholder{color:#aa929e}
+.fl-index-heading{display:flex;justify-content:space-between;gap:20px;font:12px/1.6 var(--sans);color:#9b8491;margin:21px 0 11px}
+.fl-index{border-top:1px solid #dfd3d9;list-style:none;padding:0}
+.fl-index li{border-bottom:1px solid #dfd3d9}
+.fl-index button{display:flex;align-items:center;gap:18px;padding:14px 12px;width:100%;text-align:left;min-height:64px;border-radius:2px;position:relative;color:#79566b}
+.fl-index-name{font:400 31px/1.1 var(--serif);letter-spacing:-.02em;flex:1}
+.fl-index-category{font:12px/1.6 var(--sans);color:#9a8290}
+.fl-index button[aria-pressed=true]{background:#e9ede4;color:#566750}
+.fl-index button[aria-pressed=true] .fl-index-category{color:#72806b}
+.fl-index button:hover:not([aria-pressed=true]){background:#f4eaf0}
+.fl-selection-mark{width:8px;height:8px;border-radius:50%;border:1px solid #ccb4c2;flex-shrink:0}
+.fl-index [aria-pressed=true] .fl-selection-mark{background:#6f8066;border-color:#6f8066}
+.fl-index-note{font:12px/1.8 var(--sans);color:#a18a96;margin-top:17px}
+.fl-empty{padding:25px 0}
+.fl-empty p{font:14px/1.8 var(--sans);color:#8b7480;margin-bottom:14px}
+.fl-specimen{min-width:0;background:#f3e9ed;padding:26px;border-radius:11px;border:1px solid #e6d7df}
+.fl-specimen-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;padding-bottom:19px}
+.fl-specimen-heading .fl-eyebrow{font-size:11px}
+.atelier-page .fl-specimen h3{font:400 43px/1.05 var(--serif);letter-spacing:-.03em;margin-top:9px}
+.fl-specimen-heading>span{font:12px/1.6 var(--sans);color:#8c6c80;padding-bottom:3px}
+.fl-specimen-photo{width:100%;max-width:440px;aspect-ratio:1;height:auto;background:transparent;position:relative;overflow:hidden;border-radius:5px;margin:0 auto}
+.fl-specimen-photo img{display:block;width:100%;height:100%;object-fit:contain}
+.fl-specimen-copy{padding-top:22px}
+.fl-specimen-copy .fl-eyebrow{font-size:11px}
+.atelier-page .fl-specimen h4{font:400 28px/1.1 var(--serif);letter-spacing:-.015em;margin:10px 0 16px}
+.fl-formula-active{display:flex;justify-content:space-between;gap:20px;align-items:baseline;border-top:1px solid #d8bfce;border-bottom:1px solid #d8bfce;font:12px/1.7 var(--sans);color:#96788a;padding:13px 0;margin-bottom:20px}
+.fl-formula-active span{color:#79536c;text-align:right}
+.fl-specimen .fl-button{font-size:13px;width:100%}
+.fl-science{background:#f6eff3;padding:61px 0 65px;scroll-margin-top:105px}
+.fl-science-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:8%;align-items:center}
+.fl-lab-photo{position:relative;min-width:0;margin:0;overflow:hidden;border-radius:9px;background:#eee8f1}
+.fl-lab-photo img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:contain}
+.fl-lab-photo figcaption{font:400 21px/1.3 var(--serif);padding:15px 18px;color:#84657e;background:#eee5ed}
+.fl-lab-photo figcaption em{margin-left:5px}
+.fl-science-copy{min-width:0}
+.fl-science-intro{font:15px/1.9 var(--sans);color:var(--fl-muted);margin-bottom:20px}
+.fl-science-notes{border-top:1px solid #d5c1cf;margin-bottom:25px}
+.fl-science-notes details{border-bottom:1px solid #d5c1cf}
+.fl-science-notes summary{list-style:none;position:relative;font:400 29px/1.12 var(--serif);letter-spacing:-.02em;padding:23px 43px 23px 0;cursor:pointer}
+.fl-science-notes summary::-webkit-details-marker{display:none}
+.fl-expand{position:absolute;top:27px;right:5px;width:17px;height:17px}
+.fl-expand::before,.fl-expand::after{content:"";position:absolute;inset:8px 0 auto;height:1px;background:#9e7c93}
+.fl-expand::after{transform:rotate(90deg)}
+.fl-science-notes details[open] .fl-expand::after{transform:none}
+.fl-science-notes details>p{font:14px/1.95 var(--sans);color:#94778a;padding:0 35px 23px 0}
+.fl-standard{padding:60px 0 55px;background:#eaf0e6;scroll-margin-top:105px}
+.fl-standard-heading{text-align:center;max-width:900px;margin:0 auto}
+.fl-standard-heading .flowericon{width:35px;margin:0 auto 18px;color:#84967b}
+.fl-standard .fl-eyebrow{color:#7f8b75}
+.atelier-page .fl-standard h2{font:400 clamp(38px,4.4vw,61px)/1.04 var(--serif);letter-spacing:-.025em;margin:19px 0 23px;color:#65705d}
+.fl-standard h2 em{color:#89947f}
+.fl-standard-heading>p:not(.fl-eyebrow){font:15px/1.9 var(--sans);color:#87917e}
+.fl-standard-points{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:35px;margin-top:35px;padding-top:25px;border-top:1px solid #c9d1c1;text-align:center}
+.fl-standard-points p{font:400 25px/1.2 var(--serif);color:#6c775f}
+.fl-standard-points span{display:block;font:13px/1.8 var(--sans);color:#8b9581;margin-top:9px}
+.fl-formula-invitation{padding:45px 0 48px}
+.fl-formula-invitation>.atelier-wrap{display:flex;align-items:center;justify-content:space-between;gap:35px}
+.atelier-page .fl-formula-invitation h2{font:400 49px/1.02 var(--serif);letter-spacing:-.025em;margin-top:13px}
+.fl-formula-invitation h2 em{color:#a17089}
+.fl-formula-invitation>div>p{font:14px/1.85 var(--sans);color:#9a7c8e}
+.fl-formula-invitation .fl-button{flex-shrink:0}
+@media(max-width:1050px){.fl-hero-layout{min-height:700px;padding-top:46px}.fl-hero h1 em{font-size:158px}.fl-hero h1 span{font-size:55px}.fl-library-layout,.fl-science-layout{gap:5%}.fl-specimen{padding:22px}.fl-formula-active{display:block}.fl-formula-active span{display:block;text-align:left;margin-top:5px}.fl-index-category{font-size:11px}.fl-index button{gap:12px}.fl-science-notes summary{font-size:27px}.fl-science-notes details>p{padding-right:15px}}
+@media(max-width:760px){
+  .page-the-flowers .page-breadcrumb{font-size:11px;padding-bottom:16px}.fl-eyebrow{font-size:11px}.fl-hero-layout{min-height:0;padding-top:34px;padding-bottom:245px}.fl-hero-copy{max-width:550px}.fl-hero .fl-eyebrow{font-size:10px;letter-spacing:.1em;max-width:300px;margin:0 auto}.atelier-page .fl-hero h1{margin:25px 0 20px}.fl-hero h1 span{font-size:47px}.fl-hero h1 em{font-size:132px}.fl-hero .fl-hero-science{font-size:23px;letter-spacing:-.03em}.fl-hero .fl-hero-description{font-size:14px;margin-top:18px}.fl-hero-actions{margin-top:23px;gap:17px}.fl-hero .fl-button{font-size:13px;min-height:49px;padding:12px 22px}.fl-hero .fl-text-link{font-size:12px}.fl-campaign-art{inset:auto 0 0;height:auto;width:100%;aspect-ratio:1.6;object-fit:cover;object-position:center bottom;mask-image:linear-gradient(180deg,transparent,#000 23%)}.fl-library{padding:41px 0 44px;scroll-margin-top:85px}.fl-section-heading{display:block;margin-bottom:25px}.atelier-page .fl-section-heading h2{font-size:43px;margin-top:12px}.fl-section-heading>p{font-size:14px;margin-top:17px}.fl-library-layout{grid-template-columns:1fr;gap:25px}.fl-index-heading{margin-top:17px}.fl-index{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;border:0}.fl-index li{border:1px solid #dfd3d9;border-radius:5px;overflow:hidden}.fl-index button{padding:13px 8px;text-align:center;min-height:59px;justify-content:center;gap:0;height:100%}.fl-index-name{font-size:clamp(16px,4.9vw,23px);letter-spacing:-.035em;white-space:nowrap;flex:0 1 auto}.fl-index-category,.fl-selection-mark{display:none}.fl-index-note{font-size:11px;margin-top:12px}.fl-specimen{padding:22px}.fl-specimen-photo{height:auto;aspect-ratio:1}.atelier-page .fl-specimen h3{font-size:40px}.fl-specimen-heading{padding-bottom:16px}.fl-specimen-copy{padding-top:19px}.atelier-page .fl-specimen h4{font-size:28px}.fl-formula-active{display:flex;gap:18px;font-size:12px}.fl-formula-active span{text-align:right;margin:0}
+  .fl-science{padding:40px 0 43px;scroll-margin-top:85px}.fl-science-layout{grid-template-columns:1fr;gap:27px}.fl-lab-photo{max-width:480px;justify-self:center;width:100%}.fl-lab-photo img{aspect-ratio:3/4}.fl-lab-photo figcaption{font-size:21px}.fl-science-notes summary{font-size:28px;padding:21px 35px 21px 0}.fl-science-notes details>p{font-size:14px;line-height:1.9;padding-right:0}.fl-science-intro{font-size:14px}.fl-science-copy .fl-text-link{font-size:14px}
+  .fl-standard{padding:39px 0 37px;scroll-margin-top:85px}.atelier-page .fl-standard h2{font-size:40px;margin:17px 0 21px}.fl-standard-heading>p:not(.fl-eyebrow){font-size:14px}.fl-standard-heading>p br{display:none}.fl-standard-points{grid-template-columns:1fr;gap:24px;margin-top:26px;padding-top:24px}.fl-standard-points p{font-size:26px}.fl-standard-points span{font-size:13px;margin-top:6px}
+  .fl-formula-invitation{padding:34px 0 39px}.fl-formula-invitation>.atelier-wrap{display:block}.atelier-page .fl-formula-invitation h2{font-size:47px}.fl-formula-invitation>div>p{margin-top:20px}.fl-formula-invitation .fl-button{margin-top:23px}
+}
+@media(max-width:420px){.fl-hero h1 em{font-size:124px}.fl-hero h1 span{font-size:44px}.fl-specimen{padding:18px}.fl-formula-active{display:block}.fl-formula-active span{text-align:left;margin-top:5px}.fl-specimen-heading .fl-eyebrow{font-size:10px}.fl-specimen-heading>span{font-size:11px}.fl-specimen-heading{gap:12px}}
+@media(max-width:359px){.fl-hero h1 em{font-size:107px}.fl-hero h1 span{font-size:40px}.fl-hero .fl-hero-science{font-size:21px}.fl-hero-layout{padding-bottom:210px}.fl-index{gap:6px}.fl-specimen{padding:16px}.atelier-page .fl-specimen h3{font-size:37px}.atelier-page .fl-section-heading h2{font-size:40px}}

@@ -6,6 +6,48 @@ Start from this folder:
 Open:
   http://localhost:8080
 
+PAGES
+  skincare.html, makeup.html, the-flowers.html, about.html, account.html, bag.html,
+  checkout.html
+
+These pages share the homepage header/footer. Run npm run build after
+changing shared homepage markup or scripts/build-pages.mjs. npm run dev
+also rebuilds these pages automatically.
+
+The makeup page uses scripts/makeup-page.mjs, makeup-page.css and
+makeup-page.js. Its lipstick, foundation and primer tabs share the supplied
+prototype's content. The makeup interest form saves preferences locally;
+it does not send email. The foundation-blush.png presentation image adapts
+the original foundation photo to the site's bright floral theme.
+
+The Flowers page uses scripts/flowers-page.mjs, flowers-page.css and
+flowers-page.js. Its searchable botanical index links the nine botanical
+names in the supplied prototype to their six corresponding skincare formulas.
+Science sections retain the supplied copy, without inventing flower benefits.
+
+The About page uses scripts/about-page.mjs and about-page.css, with the
+original Susie Wang and Dr. Cody Chalker photographs. Existing #story and
+#our-lab links still open the founder note and in-house laboratory sections.
+
+The bag supports adding priced formulas, removing items, quantity changes,
+and subtotals. Bag contents persist in this browser. The account page saves
+a clearly labelled local preview profile. No passwords are collected and
+no account authentication, sign-in emails or real payments are enabled.
+
+The redesigned bag uses scripts/bag-page.mjs, bag-page.css and bag-page.js.
+It includes a six-step overview, saved gift notes and a local WELCOME10 offer
+preview. Prototype standard shipping is $6.95 below $65 in merchandise after
+offers, and complimentary at $65 or more. Tax is left for checkout; payments
+remain disabled. These settings come from the supplied prototype.
+
+Continue to checkout opens checkout.html. Its template is
+scripts/checkout-page.mjs, with checkout-page.css and checkout-page.js.
+cart-pricing.js shares the bag and checkout totals. Express delivery is an
+illustrative $18 option from the original prototype, not a live service quote.
+The checkout validates contact/address fields, supports optional saved details,
+shows an order review and saves a local checkout preview. It never collects
+card details, charges payment, sends email, places an order or clears the bag.
+
 Node.js 18 or newer is required. No npm install is needed.
 Keep index.html, the CSS/JS files, img, package.json, and scripts together.
 Ctrl+C stops the preview server; it does not remove project files.
@@ -13,9 +55,12 @@ Ctrl+C stops the preview server; it does not remove project files.
 RECOVERY
 The missing presentation was recovered from its saved edits and image previews.
 The original generated hero cutouts and bright makeup image were restored.
-Some original product and portrait images were recovered at preview resolution.
-The recovered-product-photos.svg file uses the saved photographs without
-replacing their contents with newly generated product images.
+All nine skincare photographs have now been copied from the original
+Flower Ink Store Prototype and are used directly in the collection.
+The skincare page has its own editorial layout, ritual edits and six-step
+filters. Edit scripts/build-pages.mjs and skincare.css, then run npm run build.
+Some portrait images still use recovered previews. The older product-photo
+preview atlas is retained as a recovery asset.
 
 The newsletter remains a local presentation form, without a mailing service.
 The Shopify section package is separate and has not been installed on Shopify.

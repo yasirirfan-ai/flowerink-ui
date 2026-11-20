@@ -1,0 +1,100 @@
+/* Original botanical photography, arranged as an open editorial collection. */
+.page-skincare{--skin-ink:#613f55;--skin-muted:#886c7e;background:#fffaf7}
+.page-skincare .page-kicker{font-size:12px;letter-spacing:.13em;color:#88687c}
+.page-skincare .page-breadcrumb{font-size:12px;padding-bottom:18px}
+.skincare-intro{background:#fffaf7;overflow:hidden}
+.skincare-intro-layout{display:grid;grid-template-columns:.95fr 1.05fr;align-items:stretch;gap:0;min-height:650px;max-width:1600px;padding-top:0;padding-right:0}
+.skincare-intro-copy{position:relative;z-index:1;padding:48px 25px 48px 0;min-width:0}
+.atelier-page .skincare-intro h1{font:400 clamp(68px,6.5vw,96px)/.94 var(--serif);letter-spacing:-.045em;margin:27px 0 27px;color:var(--skin-ink)}
+.skincare-intro h1 em{font-weight:400;color:#a2718d}
+.page-skincare .skincare-intro-description{font:16px/1.8 var(--sans);color:var(--skin-muted);max-width:350px;margin-bottom:26px}
+.skincare-shop-link{display:inline-flex;align-items:center;justify-content:center;min-height:49px;padding:11px 29px;border:1px solid #835970;border-radius:40px;background:#68435b;color:#fffaf7;font:14px/1.5 var(--sans);transition:background .2s}
+.skincare-shop-link:hover{background:#895d77}
+.skincare-intro-foot{display:flex;align-items:center;gap:16px;border-top:1px solid #e1cfd8;margin-top:32px;padding-top:20px;max-width:350px}
+.skincare-intro-foot .flowericon{width:35px;color:#956c85;flex-shrink:0}
+.skincare-intro-foot p{font:italic 23px/1.1 var(--serif)}
+.skincare-intro-foot p span{font:12px/1.8 var(--sans);color:var(--skin-muted)}
+.skincare-intro-visual{position:relative;min-width:0;margin-left:-45px;isolation:isolate}
+.skincare-intro-visual::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,#fffaf7,rgba(255,250,247,.8) 8%,rgba(255,250,247,0) 33%)}
+.skincare-intro-main{position:absolute;inset:0;margin:0}
+.skincare-intro-main img{display:block;width:100%;height:100%;object-fit:cover;object-position:55% center}
+.skincare-edits{padding:70px 0 62px}
+.skincare-edits-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:34px}
+.atelier-page .skincare-edits h2{font:400 clamp(37px,4vw,54px)/1.08 var(--serif);letter-spacing:-.025em;margin-top:12px}
+.skincare-edits-heading>p{font:14px/1.8 var(--sans);color:var(--skin-muted);padding-bottom:3px}
+.skincare-edits-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.skincare-edit{--edit-accent:#7c455f;--edit-muted:#856576;min-width:0;scroll-margin-top:120px;background:#f4e3e8;border:1px solid #e7cdd8;border-radius:14px;padding:30px;display:flex;flex-direction:column;color:#603d53}
+.skincare-edit--icons{--edit-accent:#635078;--edit-muted:#7d6f8c;background:#ece7f3;border-color:#d9cfe6;color:#574365}
+.skincare-edit-heading{padding-bottom:23px}
+.skincare-edit-label{font:12px/1.6 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--edit-accent)}
+.atelier-page .skincare-edit h3{font:400 clamp(36px,3.3vw,48px)/1.08 var(--serif);letter-spacing:-.025em;margin:12px 0 13px;color:inherit}
+.skincare-edit-steps{font:14px/1.6 var(--sans);color:var(--edit-accent)}
+.skincare-edit-description{font:14px/1.8 var(--sans);color:var(--edit-muted);margin-top:12px;min-height:51px}
+.skincare-edit-photos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin-top:auto}
+.skincare-edit-photos figure{min-width:0;margin:0}
+.skincare-edit-photos button{display:block;width:100%;padding:0;border-radius:5px;overflow:hidden}
+.skincare-edit-photos button:focus-visible{outline:2px solid var(--edit-accent);outline-offset:3px}
+.skincare-edit-photos img{display:block;width:100%;height:auto;aspect-ratio:.72;object-fit:cover}
+.skincare-edit-photos figcaption{font:12px/1.5 var(--sans);color:var(--edit-muted);padding-top:11px}
+.skincare-edit-photos figcaption span{display:block;font:500 14px/1.4 var(--sans);color:var(--edit-accent);margin-bottom:4px}
+.skincare-edit-footer{display:flex;align-items:center;justify-content:space-between;gap:18px;border-top:1px solid #b48a9f55;margin-top:24px;padding-top:20px}
+.skincare-edit-footer>span{font:italic 21px/1.2 var(--serif)}
+.skincare-edit-action{font:500 13px/1.5 var(--sans);border:1px solid var(--edit-accent);border-radius:30px;padding:11px 17px;text-align:center;color:var(--edit-accent);background:transparent;flex-shrink:0}
+.skincare-edit-action:hover,.skincare-edit-action[aria-pressed=true]{color:#fffaf7;background:var(--edit-accent)}
+.skincare-catalogue{background:#fffaf7;padding:53px 0 75px}
+.skincare-catalogue .shop-collection-container{max-width:1440px}
+.skincare-catalogue .catalogue-heading{padding-top:32px;border-top:1px solid #ddc9d4;align-items:flex-end;margin-bottom:34px}
+.atelier-page .skincare-catalogue .catalogue-heading h2{font:400 clamp(40px,4.3vw,61px)/1.03 var(--serif);letter-spacing:-.035em;margin-top:13px}
+.skincare-catalogue .catalogue-heading h2 em{color:#a2718d}
+.skincare-catalogue .catalogue-heading .page-kicker{text-align:left;max-width:none}
+.skincare-catalogue .catalogue-heading>p{font:14px/1.8 var(--sans);text-align:left;color:var(--skin-muted);padding-bottom:4px}
+.skincare-catalogue .shop-collection-toolbar{align-items:center;padding:0 0 20px;margin-bottom:8px;border-bottom:1px solid #e6d8df;gap:20px}
+.skincare-catalogue .shop-collection-filters{gap:23px;flex-wrap:wrap}
+.skincare-catalogue .shop-collection-filters button{font-size:14px;padding:10px 0;border:0;border-bottom:1px solid transparent;border-radius:0;color:var(--skin-muted);background:none}
+.skincare-catalogue .shop-collection-filters button[aria-pressed=true]{color:var(--skin-ink);border-color:#87536e}
+.skincare-catalogue .shop-collection-filters button:hover{color:#613f55}
+.skincare-catalogue .shop-collection-count{font-size:12px}
+.skincare-catalogue .shop-product-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:42px 28px;padding-top:14px}
+.skincare-catalogue .shop-product-media{border-radius:3px}
+.skincare-catalogue .shop-product-overline{font-size:11px;letter-spacing:.05em}
+.skincare-catalogue .shop-product-info{padding-top:17px}
+.skincare-catalogue .shop-product-card h3{font-size:29px;min-height:64px}
+.skincare-catalogue .shop-product-price{font-size:14px;white-space:normal}
+.skincare-catalogue .shop-product-active{font-size:13px}
+.skincare-catalogue .shop-product-foot{margin-top:10px}
+.skincare-botanical-note{background:#f2e5ec;padding:49px 0}
+.skincare-botanical-note>.atelier-wrap{display:flex;align-items:center;justify-content:center;gap:65px}
+.skincare-botanical-note .flowericon{width:69px;color:#a57692;flex-shrink:0}
+.skincare-botanical-note p{font:400 clamp(34px,4vw,50px)/1.05 var(--serif);letter-spacing:-.025em}
+.skincare-botanical-note .page-text-link{font-size:14px;margin-left:40px;flex-shrink:0}
+.skincare-color{padding:65px 0 72px}
+.skincare-color-layout{display:grid;grid-template-columns:1fr 1fr;gap:7%;align-items:center}
+.skincare-color figure{overflow:hidden;border-radius:10px;aspect-ratio:1;margin:0;background:#f6e7ed}
+.skincare-color img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:contain}
+.atelier-page .skincare-color h2{font:400 clamp(42px,4.6vw,65px)/1.02 var(--serif);letter-spacing:-.03em;margin:18px 0 20px}
+.skincare-color p:not(.page-kicker){font:16px/1.8 var(--sans);color:var(--skin-muted);margin-bottom:23px}
+@media(max-width:1100px){
+  .skincare-intro-layout{min-height:600px}.atelier-page .skincare-intro h1{font-size:74px}.skincare-intro-visual{margin-left:-25px}
+  .skincare-edit{padding:23px}.skincare-edit-footer{align-items:flex-start;flex-direction:column;gap:14px}.skincare-edit-footer>span{max-width:none}.skincare-edit-description{min-height:76px}.skincare-catalogue .shop-collection-filters{gap:17px}.skincare-catalogue .shop-collection-toolbar{flex-wrap:wrap}
+  .skincare-catalogue .shop-product-card h3{font-size:26px}.skincare-catalogue .shop-product-grid{gap:35px 22px}.skincare-botanical-note>.atelier-wrap{gap:35px}.skincare-botanical-note .page-text-link{margin-left:0}
+}
+@media(max-width:760px){
+  .page-skincare .page-kicker{font-size:11px}.page-skincare .page-breadcrumb{font-size:11px;padding-top:18px}
+  .skincare-intro-layout{grid-template-columns:1fr;min-height:0}.skincare-intro-copy{padding:20px clamp(22px,4.8vw,76px) 24px 0}
+  .atelier-page .skincare-intro h1{font-size:clamp(57px,10vw,74px);margin:19px 0 20px}.page-skincare .skincare-intro-description{font-size:14px;line-height:1.8;margin-bottom:21px}.skincare-intro-foot{display:none}
+  .skincare-intro-foot p span{font-size:11px}.skincare-intro-foot .flowericon{width:29px}.skincare-shop-link{font-size:13px;padding:11px 23px;min-height:45px}
+  .skincare-intro-visual{width:calc(100% + clamp(22px,4.8vw,76px));margin-left:calc(-1 * clamp(22px,4.8vw,76px));aspect-ratio:1.35}.skincare-intro-visual::after{background:linear-gradient(180deg,#fffaf7,rgba(255,250,247,0) 22%)}.skincare-intro-main img{object-position:center}
+  .skincare-edits{padding:40px 0 12px}.skincare-edits-heading{display:block;margin-bottom:25px}.atelier-page .skincare-edits h2{font-size:37px;margin-top:10px}.skincare-edits-heading>p{font-size:14px;margin-top:13px}.skincare-edits-heading>p br{display:none}
+  .skincare-edits-grid{grid-template-columns:1fr;gap:24px}.skincare-edit{padding:25px}.skincare-edit-heading{padding-bottom:20px}.atelier-page .skincare-edit h3{font-size:40px}.skincare-edit-description{min-height:0}.skincare-edit-footer{flex-direction:row;align-items:center}.skincare-edit-photos{gap:9px}.skincare-edit-photos img{aspect-ratio:.8}
+  .skincare-catalogue{padding:35px 0 43px}.skincare-catalogue .catalogue-heading{padding-top:27px;margin-bottom:21px}.atelier-page .skincare-catalogue .catalogue-heading h2{font-size:43px}.skincare-catalogue .catalogue-heading>p{display:none}
+  .skincare-catalogue .shop-collection-toolbar{gap:9px;padding-bottom:16px}.skincare-catalogue .shop-collection-filters{flex-wrap:nowrap;gap:24px;overflow-x:auto;width:100%;scrollbar-width:thin;padding-bottom:5px}.skincare-catalogue .shop-collection-filters button{font-size:13px;flex-shrink:0}.skincare-catalogue .shop-product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:29px 18px;padding-top:10px}
+  .skincare-catalogue .shop-product-info{padding-top:12px}.skincare-catalogue .shop-product-overline{font-size:10px}.skincare-catalogue .shop-product-card h3{font-size:23px;min-height:76px}.skincare-catalogue .shop-product-price{font-size:13px}.skincare-catalogue .shop-product-active{font-size:12px;line-height:1.6}.skincare-catalogue .shop-product-name-row{gap:8px}.skincare-catalogue .shop-product-foot{margin-top:6px}
+  .skincare-botanical-note{padding:31px 0}.skincare-botanical-note>.atelier-wrap{flex-wrap:wrap;justify-content:flex-start;gap:20px 25px}.skincare-botanical-note .flowericon{width:42px}.skincare-botanical-note p{font-size:35px}.skincare-botanical-note .page-text-link{font-size:13px;margin-left:67px}
+  .skincare-color{padding:38px 0 43px}.skincare-color-layout{grid-template-columns:1fr;gap:29px}.atelier-page .skincare-color h2{font-size:39px;margin:13px 0 15px}.skincare-color p:not(.page-kicker){font-size:14px;line-height:1.75;margin-bottom:20px}
+}
+@media(max-width:520px){
+  .skincare-intro-copy{padding-top:8px}.atelier-page .skincare-intro h1{font-size:64px;max-width:370px;line-height:.96}.skincare-intro h1 br:nth-of-type(2){display:none}.skincare-intro-description{max-width:340px}.skincare-intro-visual{aspect-ratio:1.05}
+  .skincare-edit{padding:20px 17px}.skincare-edit-label{font-size:11px}.skincare-edit-steps{font-size:13px}.skincare-edit-photos{gap:6px}.skincare-edit-photos img{aspect-ratio:.7}.skincare-edit-photos figcaption{font-size:11px}.skincare-edit-photos figcaption span{font-size:12px}.skincare-edit-footer{flex-direction:column;align-items:flex-start;margin-top:19px;padding-top:18px;gap:13px}.skincare-edit-footer>span{font-size:21px}.skincare-edit-action{font-size:13px;width:100%}
+  .skincare-catalogue .shop-product-grid{gap:26px 15px}.skincare-catalogue .shop-product-name-row{display:block}.skincare-catalogue .shop-product-card h3{font-size:23px;min-height:0}.skincare-catalogue .shop-product-price{display:block;margin-top:9px}.skincare-catalogue .shop-product-overline{font-size:9px;letter-spacing:.03em}.skincare-catalogue .shop-product-active{font-size:11px}.skincare-catalogue .shop-product-foot{gap:6px}.skincare-catalogue .shop-product-explore{width:30px;min-width:30px;height:30px;min-height:30px}
+  .atelier-page .skincare-color h2{font-size:47px}
+}

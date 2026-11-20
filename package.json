@@ -4,7 +4,10 @@
   "private": true,
   "description": "Local preview for the Flower Ink storefront",
   "scripts": {
+    "build": "node scripts/build-pages.mjs",
+    "predev": "npm run build",
     "dev": "node scripts/dev-server.mjs",
+    "prestart": "npm run build",
     "start": "node scripts/dev-server.mjs"
   },
   "engines": {
